@@ -60,12 +60,8 @@ public class SlideBarContainer {
     
     public double getSliderValue(){
         return this.slider.getValue();        
-    }
-    
-    public void setSliderTypeValue(String type){
-        this.numberType = type;
-    }
-    
+    }   
+   
     public Slider getSlider(){
         return this.slider;
     }
