@@ -1,0 +1,5 @@
+Hello, my name is Text File
+my mision is providing info
+in order to test this algorithm
+so that, the programmer can confirm
+the programs works as expected
