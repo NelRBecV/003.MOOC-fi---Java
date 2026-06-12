@@ -25,8 +25,7 @@ public class SavingsCalculatorApplication extends Application{
                 
         moneySlider.showSliderValue(true,"integer");
         moneySlider.showMeasuementScale(true,true);
-        moneySlider.setDescription("Monthly savings");
-        moneySlider.setSliderTypeValue("integer");
+        moneySlider.setDescription("Monthly savings");        
                 
         interestSlider.setDescription("Yearly interest rate");
         interestSlider.showMeasuementScale(true, false);
@@ -43,16 +42,15 @@ public class SavingsCalculatorApplication extends Application{
             moneyInvested = moneySlider.getSliderValue();
             rate = interestSlider.getSliderValue()/100;
             earningsEstimate = updateChart(moneyInvested,rate);
-            mainWindow.setCenter(earningsEstimate);
-            
-        });        
+            mainWindow.setCenter(earningsEstimate);            
+        });
+        
         interestSlider.getSlider().setOnMouseDragged((e)-> {
             interestSlider.updateSliderValue();
             moneyInvested = moneySlider.getSliderValue();
             rate = interestSlider.getSliderValue()/100;
             earningsEstimate = updateChart(moneyInvested,rate);
-            mainWindow.setCenter(earningsEstimate);
-            
+            mainWindow.setCenter(earningsEstimate);            
         });
         
         mainWindow.setTop(dataSliders);
