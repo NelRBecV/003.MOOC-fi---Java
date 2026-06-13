@@ -8,8 +8,10 @@ public class CheckYourIndentation {
         
         System.out.println("Give a number: ");
         int first = Integer.valueOf(scan.nextLine());
+        
         System.out.println("Give another number: ");
         int second = Integer.valueOf(scan.nextLine());
+        
         if (first == second){ 
             System.out.println("Same!"); 
         } else if (first > second){ 
