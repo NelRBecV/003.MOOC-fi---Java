@@ -14,6 +14,7 @@ public class StoringRecords {
         ArrayList<Person> records = readRecordsFromFile(file);
         System.out.println("Persons: " + records.size());
         System.out.println("Persons:");
+        
         for (Person person : records) {
             System.out.println(person);
 
