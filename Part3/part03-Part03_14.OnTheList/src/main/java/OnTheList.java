@@ -8,6 +8,7 @@ public class OnTheList {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<String> list = new ArrayList<>();
+        
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("")) {
@@ -15,10 +16,12 @@ public class OnTheList {
             }
 
             list.add(input);
-        }        
+        }
+        
         boolean found = false;
         System.out.println("Search for? ");
         String name = scanner.nextLine();
+        
         if (list.contains(name)){
             System.out.println(name + " was found!");
         } else { 
