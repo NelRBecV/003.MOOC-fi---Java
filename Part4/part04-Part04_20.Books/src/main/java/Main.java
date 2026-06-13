@@ -8,21 +8,27 @@ public class Main {
         // implement here the program that allows the user to enter 
         // book information and to examine them
         ArrayList<Book> bookshelf = new ArrayList<>();
+        
         while(true){
             System.out.println("Title: ");
             String name = read.nextLine();
+            
             if(name.isEmpty()){
                 break;
             }
+            
             System.out.println("Pages: ");
             int pages = Integer.valueOf(read.nextLine());
+            
             System.out.println("Year; ");
             int year = Integer.valueOf(read.nextLine());
             
             bookshelf.add(new Book(name,pages,year));
         }
+        
         System.out.println("What information will be printed? ");
         String option = read.nextLine();
+        
         for (Book book: bookshelf){
             if (option.equals("name")){
                 System.out.println(book.getName());
