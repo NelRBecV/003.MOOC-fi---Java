@@ -8,8 +8,10 @@ public class RecordsFromAFile {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Name of the file: ");
         String file = scanner.nextLine();
+        
         try {
             Scanner data = new Scanner(Paths.get(file));
+            
             while (data.hasNextLine()){
                 String[] line = data.nextLine().split(",");
                 System.out.println(line[0] + ", age: " + line[1] + " years");
