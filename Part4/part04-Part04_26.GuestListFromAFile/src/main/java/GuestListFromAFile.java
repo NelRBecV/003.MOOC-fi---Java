@@ -12,6 +12,7 @@ public class GuestListFromAFile {
         String file = scanner.nextLine();
 
         ArrayList<String> list = new ArrayList<>();
+        
         // implement reading the file here.
         System.out.println("");
         try {
