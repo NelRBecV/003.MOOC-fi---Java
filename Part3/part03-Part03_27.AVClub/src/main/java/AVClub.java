@@ -10,6 +10,7 @@ public class AVClub {
             if (text.isEmpty()){
                 break;
             }
+            
             String[] words = text.split(" ");
             for(String word : words){
                 if (word.contains("av")){
