@@ -8,6 +8,7 @@ public class Main {
 
         ArrayList<TelevisionProgram> programs = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+        
         while (true){            
             System.out.println("Name: ");
             String name = scanner.nextLine();
@@ -15,12 +16,15 @@ public class Main {
             if (name.isEmpty()){
                 break;
             }
+            
             System.out.println("Duration: ");
             int duration = Integer.valueOf(scanner.nextLine());
             programs.add(new TelevisionProgram(name,duration));
         }
+        
         System.out.println("Program\'s maximum duration: ");
         int durationLength = Integer.valueOf(scanner.nextLine());
+        
         for (TelevisionProgram program: programs){
             if (program.getDuration() <= durationLength){
                 System.out.println(program);
