@@ -7,6 +7,7 @@ public class DivisibleByThree {
         Scanner scanner = new Scanner(System.in);
         int start = Integer.valueOf(scanner.nextLine());
         int finish = Integer.valueOf(scanner.nextLine());
+        
         divisibleByThreeInRange(start,finish);
     }
     public static void divisibleByThreeInRange(int beginning, int end){
