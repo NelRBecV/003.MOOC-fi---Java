@@ -7,12 +7,15 @@ public class NumberAndSumOfNumbers {
         Scanner scanner = new Scanner(System.in);
         int count = 0;
         int sum = 0;
+        
         while (true){
             System.out.println("Give a number: ");
             int user = Integer.valueOf(scanner.nextLine());
+            
             if (user == 0){
                 break;
             }
+            
             count +=1;
             sum += user;
         }
