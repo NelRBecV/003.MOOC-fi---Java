@@ -12,6 +12,7 @@ public class AverageOfAList {
         // Then it computes the average of the numbers on the list
         // and prints it.
         ArrayList<Integer> numbers = new ArrayList<>();
+        
         while (true){
             int input = Integer.valueOf(scanner.nextLine());
             if (input == -1) {
@@ -19,7 +20,9 @@ public class AverageOfAList {
             }
             numbers.add(input);
         }
+        
         int sum = 0;
+        
         for (int i = 0; i<numbers.size();i++){
             sum += numbers.get(i);
         }
