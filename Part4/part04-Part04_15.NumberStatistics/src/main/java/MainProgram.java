@@ -16,6 +16,7 @@ public class MainProgram {
         Statistics stat = new Statistics();
         Statistics even = new Statistics();
         Statistics odd = new Statistics();
+        
         while(true){
             int input = Integer.valueOf(scanner.nextLine());
             if(input == -1){
@@ -28,6 +29,7 @@ public class MainProgram {
             }
             stat.addNumber(input);
         }
+        
         System.out.println("Sum: " + stat.sum());
         System.out.println("Sum of even numbers: " + even.sum());
         System.out.println("Sum of odd numbers: " + odd.sum());
