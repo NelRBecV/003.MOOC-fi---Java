@@ -8,6 +8,7 @@ public class PrintingASpecifiedFile {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Which file should have its contents printed?");
         String file = scanner.nextLine();
+        
         try {
             Scanner readData = new Scanner(Paths.get(file));
             while(readData.hasNext()){
