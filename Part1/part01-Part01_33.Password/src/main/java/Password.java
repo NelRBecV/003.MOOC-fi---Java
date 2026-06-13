@@ -9,6 +9,7 @@ public class Password {
         // Write your program here 
         System.out.println("Password?");
         String pwrd = scan.nextLine();
+        
         if (pwrd.equals("Caput Draconis")){
             System.out.println("Welcome!");
         } else {
