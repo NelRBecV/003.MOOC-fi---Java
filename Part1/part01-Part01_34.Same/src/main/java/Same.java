@@ -9,8 +9,10 @@ public class Same {
         // Write your program here. 
         System.out.println("Enter the first string:");
         String first = scan.nextLine();
+        
         System.out.println("Enter the second string: ");
         String second = scan.nextLine();
+        
         if (first.equals(second)){
             System.out.println("Same");
         } else {
