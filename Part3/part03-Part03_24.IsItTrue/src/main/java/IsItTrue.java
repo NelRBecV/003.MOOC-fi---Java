@@ -7,6 +7,7 @@ public class IsItTrue {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a string: ");
         String textInput = scanner.nextLine();
+        
         if (textInput.equals("true")){
             System.out.println("You got it right!");
         } else {
