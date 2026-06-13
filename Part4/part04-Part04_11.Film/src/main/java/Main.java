@@ -11,8 +11,10 @@ public class Main {
         Film paprika = new Film("Paprika", 21);
         
         Film[] movies = {matrix,dbsBroly,paprika};
+        
         System.out.println("How old are you? ");
         int myAge = Integer.valueOf(scanner.nextLine());
+        
         for (Film film: movies){
             if (film.ageRating()< myAge){
                 System.out.println("You have age enough to watch " + film.name());
