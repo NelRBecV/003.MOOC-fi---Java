@@ -9,6 +9,7 @@ public class Positivity {
         // Write your program here
         System.out.println("Give a number: ");
         int pos = Integer.valueOf(scan.nextLine());
+        
         if (pos > 0) {
             System.out.println("The number is positive.");
         } else {
