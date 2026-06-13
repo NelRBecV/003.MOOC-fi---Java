@@ -7,9 +7,11 @@ public class LastWords {
         Scanner scanner = new Scanner(System.in);
         while (true){
             String text = scanner.nextLine();
+            
             if (text.isEmpty()){
                 break;
             }
+            
             String[] words = text.split(" ");
             int lastWord = words.length-1;
             System.out.println(words[lastWord]);
