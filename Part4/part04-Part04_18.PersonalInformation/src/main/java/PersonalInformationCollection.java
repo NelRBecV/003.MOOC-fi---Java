@@ -19,8 +19,10 @@ public class PersonalInformationCollection {
             
             System.out.println("Last Name: ");
             String last = scanner.nextLine();
+            
             System.out.println("Identification Number: ");
             String idNumber = scanner.nextLine();
+            
             infoCollection.add(new PersonalInformation(first,last,idNumber));
         }
         for (PersonalInformation info : infoCollection ){
