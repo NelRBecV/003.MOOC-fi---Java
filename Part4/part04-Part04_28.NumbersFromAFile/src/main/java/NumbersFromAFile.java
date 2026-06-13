@@ -12,9 +12,12 @@ public class NumbersFromAFile {
         
         System.out.println("Lower bound? ");
         int lowerBound = Integer.valueOf(scanner.nextLine());
+        
         System.out.println("Upper bound? ");
-        int upperBound = Integer.valueOf(scanner.nextLine());                
+        int upperBound = Integer.valueOf(scanner.nextLine());
+        
         int count = 0;
+        
         try {
             Scanner data = new Scanner(Paths.get(file));
             while(data.hasNextLine()){
