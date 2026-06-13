@@ -10,6 +10,7 @@ public class Reprint {
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many times?");
         int times = Integer.valueOf(scanner.nextLine());
+        
         for (int i=0; i < times; i++){
             printText();
         }
