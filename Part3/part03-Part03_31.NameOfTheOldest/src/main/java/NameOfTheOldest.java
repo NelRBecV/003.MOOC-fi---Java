@@ -8,13 +8,17 @@ public class NameOfTheOldest {
         Scanner scanner = new Scanner(System.in);
         String oldName = "";
         int oldAge = 0;
+        
         while(true){
             String text = scanner.nextLine();
+        
             if (text.isEmpty()){
                 break;
             }
+            
             String[] data = text.split(",");
             int age = Integer.valueOf(data[1]);
+            
             if (age > oldAge){
                 oldAge = age;
                 oldName = data[0];
