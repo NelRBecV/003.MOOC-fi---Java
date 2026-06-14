@@ -51,10 +51,13 @@ public class GradeRegister {
         if (this.grades.isEmpty()){
             return -1;
         }
+        
         int sum = 0;
+        
         for(int grade:grades){
             sum += grade;
         }
+        
         return (double) sum / grades.size();
     }
     
@@ -62,12 +65,15 @@ public class GradeRegister {
         if(this.points.isEmpty()){
             return -1;
         }
+        
         int count = 0;
         int sum = 0;
+        
         while(count < this.points.size()){
             sum += this.points.get(count);
             count++;
         }
+        
         return (double) sum / this.points.size();
     }
 }
