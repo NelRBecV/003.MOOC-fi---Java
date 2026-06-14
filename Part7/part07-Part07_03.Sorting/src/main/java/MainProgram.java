@@ -6,12 +6,15 @@ public class MainProgram {
         if(numbers.length == 0){
             return 0;
         }
+        
         int smallest = numbers[0];
+        
         for(int num: numbers){
             if(num < smallest){
                 smallest = num;
             }
         }
+        
         return smallest;
     }
     
@@ -19,14 +22,16 @@ public class MainProgram {
         if(numbers.length == 0){
             return 0;
         }
+        
         int smallest = smallest(numbers);
         int num = 0;
+        
         for(int i = 0; i < numbers.length; i++){
             if (numbers[i] == smallest){
                 num = i;
                 break;
             }
-        }
+        }        
         return num;
     }
     
@@ -34,8 +39,10 @@ public class MainProgram {
         if (numbers.length == 0){
             return 0;
         }
+        
         int smallest = numbers[index];
         int smallIndex = index;
+        
         for(int num = index; num < numbers.length; num++){            
             if (smallest > numbers[num]){
                 smallest = numbers[num];
@@ -49,7 +56,8 @@ public class MainProgram {
         if (values.length == 0){
             return;
         }
-        int middle = values[index2];
+        
+        int middle = values[index2];        
         
         values[index2] = values[index1];
         values[index1] = middle;
@@ -58,10 +66,13 @@ public class MainProgram {
     public static void sort(int[] numbers){
         if(numbers.length == 0){
             return;
-        }        
+        }
+        
         int count = 0;
+        
         while (count < numbers.length){
             int small = indexOfSmallestFrom(numbers,count);           
+            
             if (numbers[count] > numbers[small]){
                 swap(numbers,count,small);                         
             }
