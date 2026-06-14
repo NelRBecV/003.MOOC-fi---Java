@@ -12,9 +12,11 @@ public class ExerciseManagement {
     
     public ArrayList<String> exerciseList(){
         ArrayList<String> list = new ArrayList<>();
+        
         for (Exercise exercise: this.exercises){
             list.add(exercise.getName());
         }
+        
         return list;
     }
     
@@ -24,6 +26,7 @@ public class ExerciseManagement {
     
     public void markAsCompleted(String exercise){
         for (Exercise exer:this.exercises){
+            
             if(exer.getName().equals(exercise)){
                 exer.setCompleted(true);
             }
@@ -32,10 +35,12 @@ public class ExerciseManagement {
     
     public boolean isCompleted(String exercise){
         for (Exercise exer:this.exercises){
+            
             if(exer.getName().equals(exercise)){
                 return exer.isCompleted();
             }
         }
+        
         return false;
     }
 }
