@@ -30,16 +30,20 @@ public class UserInterface {
     
     public void start(){
         this.menu();
+        
         while (true) {
             System.out.println("Command: ");            
             String command = scan.nextLine();
+        
             if (command.equals("X")) {
                 break;
             }
+            
             if (command.equals("1")) {
                 System.out.println("Write the joke to be added:");
                 String joke = scan.nextLine();
                 jokes.addJoke(joke);
+                
             } else if (command.equals("2")) {
                 System.out.println("Drawing a joke.");
                 System.out.println(jokes.drawJoke());
