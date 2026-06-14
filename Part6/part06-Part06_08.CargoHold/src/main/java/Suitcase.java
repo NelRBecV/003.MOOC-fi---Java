@@ -28,9 +28,11 @@ public class Suitcase {
     public String toString(){        
         String items = Integer.toString(this.suitcase.size());
         String s = "";
+        
         if(this.suitcase.size() != 1){
             s="s";
         }
+        
         if(this.suitcase.size() == 0){
             items = "no";
         }
@@ -41,23 +43,28 @@ public class Suitcase {
         if (this.suitcase.isEmpty()){
             return null;
         }
+        
         Item heaviest = new Item("thing",0);
         for(Item item: this.suitcase){
             if(item.getWeight() > heaviest.getWeight()){
                 heaviest = item;
             }
         }
+        
         return heaviest;
     }
     public int totalWeight(){
         int total = 0;
+        
         for(Item item: this.suitcase){
             total += item.getWeight();
         }
+        
         return total;
     }
     
     public void printItems(){
+        
         for (Item item: this.suitcase){
             System.out.println(item);
         }
