@@ -21,13 +21,14 @@ public class Person {
         if (!(compared instanceof Person)){
             return false;
         }
+        
         Person prsn = (Person) compared;
         String name = prsn.name;
         SimpleDate birth = prsn.birthday;
         int height = prsn.height;
         int weight = prsn.weight;
         
-        if(name.equals(this.name)&& birth.equals(this.birthday)&& height == this.height && weight == this.weight){
+        if(name.equals(this.name) && birth.equals(this.birthday) && height == this.height && weight == this.weight){
             return true;
         }
         return false;
