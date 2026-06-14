@@ -15,6 +15,7 @@ public class LiquidContainers {
             System.out.println("Second: " + second + "/100");
 
             String input = scan.nextLine();
+            
             if (input.equals("quit")) {                
                 break;
             }
@@ -36,6 +37,7 @@ public class LiquidContainers {
             
             if(command[0].equals("move")){
                 int litres = 0;
+                
                 if(first < amount){
                     litres = first;
                 } else {
@@ -52,6 +54,7 @@ public class LiquidContainers {
             
             if(command[0].equals("remove")){
                 second -= amount;
+                
                 if(second < 0){
                     second = 0;
                 }
