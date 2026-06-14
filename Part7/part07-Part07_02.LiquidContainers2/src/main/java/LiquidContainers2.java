@@ -9,14 +9,15 @@ public class LiquidContainers2 {
         Container second = new Container();
 
         while (true) {            
-            System.out.print("");            
-            
+            System.out.print("");
             System.out.println("First: " + first + "\n" + "Second: " + second);
             
             String input = scan.nextLine();
+            
             if (input.equals("quit")) {
                 break;
             }
+            
             String[] data = input.split(" ");
             int amount = Integer.valueOf(data[1]);
             
