@@ -20,7 +20,8 @@ public class TextUI {
     
     public void start(){
         //The best way to have done this was creating separate functions
-        //e.g. add(), end(), search()
+        //e.g. add(), end(), search()...
+        
         while(true){
             System.out.println("Command: ");
             String command = read.nextLine();
@@ -31,6 +32,7 @@ public class TextUI {
             }
             
             if (command.equals("add")){
+                
                 System.out.println("Word:");
                 String word = this.read.nextLine();
                 System.out.println("Translation:");
@@ -40,11 +42,14 @@ public class TextUI {
                     dictionary.add(word, trans);
                     continue;
                 }
-            }    
+            }
+            
             if (command.equals("search")){
                 System.out.println("To be translated: ");
                 String word = read.nextLine();
-                String find = this.dictionary.translate(word);                
+                
+                String find = this.dictionary.translate(word);
+                
                 if(find == null){
                     System.out.println("Word " + word + " was not found");    
                 }else{
