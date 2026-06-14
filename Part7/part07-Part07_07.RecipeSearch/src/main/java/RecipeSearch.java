@@ -15,13 +15,16 @@ public class RecipeSearch {
             File fileObj = new File(txtFile);
             Scanner dataFile = new Scanner(fileObj);
             String data = "";
+            
             while (dataFile.hasNextLine()){                
                 data += dataFile.nextLine().strip()+",";                                                  
             }
+            
             data += " ";
             String[] fileContent = data.split(",");
             ArrayList<String>recipeElements = new ArrayList<>();
-            for (String content : fileContent){               
+            
+            for (String content : fileContent){            
                 if (content.isBlank()){                    
                     String name = recipeElements.get(0);
                     int time = Integer.valueOf(recipeElements.get(1));
@@ -29,7 +32,8 @@ public class RecipeSearch {
                     
                     for(int i = 2; i < recipeElements.size();i++ ){
                         ingredients.add(recipeElements.get(i));
-                    }                    
+                    }
+                    
                     recipe.add(new Recipes(name,time,ingredients));
                     recipeElements.clear();
                     continue;
@@ -39,7 +43,8 @@ public class RecipeSearch {
             
         } catch(Exception e){
             System.out.println("Error: " + e);
-        }        
+        }
+        
         if (!recipe.isEmpty()){
             RecipesProgramInterface userInterface = new RecipesProgramInterface(scanner, recipe);
             userInterface.commandsMenu();
