@@ -25,17 +25,19 @@ public class TodoList {
     
     public void remove(int number){   
         //was "or ||" not "and &&"
-        if(number < 1 && number > this.list.size()){
+        if(number < 1 || number > this.list.size()){
             return;
         }
+        
         String completed = this.list.get(number);
         this.list.remove(number-1);       
     }
     
-    public void print(){
+    public void print(){        
         if(this.list.size() == 0){
             System.out.println("No tasks available");
         }
+        
         for(int n = 0; n < list.size(); n++){
             System.out.println(n+1 + ": " + list.get(n));
         }
