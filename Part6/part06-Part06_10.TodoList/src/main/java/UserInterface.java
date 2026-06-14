@@ -24,6 +24,7 @@ public class UserInterface {
     }
     
     public void start(){
+        
         while(true){
             System.out.println("command: ");
             String command = scan.nextLine();
