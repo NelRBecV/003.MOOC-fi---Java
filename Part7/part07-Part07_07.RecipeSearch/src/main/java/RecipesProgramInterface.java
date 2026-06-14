@@ -29,6 +29,7 @@ public class RecipesProgramInterface {
     
     private void printRecipes(){
         System.out.println("Recipes: ");
+        
         for (Recipes meal : list){
             System.out.println(meal);
         }
@@ -36,6 +37,7 @@ public class RecipesProgramInterface {
     
     private void findRecipesByName(String searchWord){        
         System.out.println("Recipes: ");
+        
         for (Recipes recipe : list){            
             if (recipe.getRecipeName().contains(searchWord)){                
                 System.out.println(recipe);
@@ -46,6 +48,7 @@ public class RecipesProgramInterface {
     
     private void findRecipesByTime(int amount){
         System.out.println("Recipes: ");
+        
         for (Recipes recipe : list){
             if(recipe.getRecipeCookingTime() <= amount){
                 System.out.println(recipe);
@@ -55,6 +58,7 @@ public class RecipesProgramInterface {
     
     private void findRecipesByIngredients(String recipeIngredient){
         System.out.println("Recipes: ");
+        
         for (Recipes recipe : list){
             for (String ingredient : recipe.getRecipeIngredients()){                
                 if(ingredient.equals(recipeIngredient)){
@@ -68,6 +72,7 @@ public class RecipesProgramInterface {
         while(true){
             System.out.println("Enter command: ");
             String command = input.nextLine();
+            
             if (command.equals("stop")){
                 break;
             }
