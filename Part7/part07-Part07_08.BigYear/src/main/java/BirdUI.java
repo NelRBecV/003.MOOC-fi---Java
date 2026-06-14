@@ -51,17 +51,22 @@ public class BirdUI {
     
     public void runProgram(){
         System.out.println("Menu: ");
+        
         while(true){
             System.out.println("?");
             String command = input.nextLine();
+            
             if(command.equals("Quit")){
                 break;
             }
+            
             if(command.equals("Add")){
                 System.out.println("Name: ");
                 String name = input.nextLine();
+                
                 System.out.println("Name in Latin: ");
                 String latin = input.nextLine();
+                
                 if (!name.isBlank() && !latin.isBlank()){
                     this.addBird(name,latin);
                 }
@@ -72,6 +77,7 @@ public class BirdUI {
                 String bird = input.nextLine();
                 this.birdObservation(bird);
             }
+            
             if (command.equals("One")){
                 System.out.println("Bird?");
                 String bird = input.nextLine();
