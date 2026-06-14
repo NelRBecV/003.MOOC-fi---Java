@@ -21,6 +21,7 @@ public class Container {
         }
         
         this.content += amount;
+        
         if(this.content > 100){
             this.content = 100;
         }        
@@ -32,6 +33,7 @@ public class Container {
         }
         
         this.content -= amount;
+        
         if(this.content < 0){
             this.content = 0;
         }
