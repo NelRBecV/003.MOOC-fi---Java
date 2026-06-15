@@ -27,6 +27,7 @@ public class ButtonAndTextFieldApplication extends Application{
         TextField myWritingSpace = new TextField();
         Separator separator1 = new Separator();
         Button myClickeableButton = new Button("Submit");
+        
         separator1.setOrientation(Orientation.VERTICAL);
         
         //VBox arranges ertically window objects 
