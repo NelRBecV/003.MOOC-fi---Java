@@ -21,10 +21,8 @@ public class TextStatisticsApplication extends Application{
     @Override
     public void start(Stage win){
         
-       BorderPane elementsGroup = new BorderPane();
-       
-       HBox statistics = new HBox();
-       
+       BorderPane elementsGroup = new BorderPane();       
+       HBox statistics = new HBox();       
        TextArea text = new TextArea();
        Label letterCounter = new Label("Letters: 0");
        Label wordCounter = new Label("Words: 0");
@@ -39,7 +37,6 @@ public class TextStatisticsApplication extends Application{
                    .sorted((s1,s2)-> s2.length() - s1.length())
                    .findFirst()
                    .get();
-                   
            
            letterCounter.setText("Letters: " + lettersCount);
            wordCounter.setText("Words: " + wordsCount);
