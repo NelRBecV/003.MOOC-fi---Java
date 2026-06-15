@@ -67,8 +67,7 @@ public class SlideBarContainer {
     }
     
     public BorderPane retrieveContainer(){
-        this.container.setPadding(new Insets(10,20,10,20));
-        
+        this.container.setPadding(new Insets(10,20,10,20));        
         this.container.setLeft(description);
         this.container.setCenter(slider);
         this.container.setRight(sliderValue);       
