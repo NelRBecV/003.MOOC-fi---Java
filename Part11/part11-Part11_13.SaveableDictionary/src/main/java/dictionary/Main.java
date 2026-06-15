@@ -10,21 +10,21 @@ public class Main {
             System.out.println("Java dictionary was successfully loaded");
         }
         dictionary.add("programation", "programming");
-        //dictionary.add("papilion", "mariposa");
-        //dictionary.add("chien", "perro");
-        //dictionary.add("voiture", "vehiculo");
+        dictionary.add("papilion", "mariposa");
+        dictionary.add("chien", "perro");
+        dictionary.add("voiture", "vehiculo");
         
-        //System.out.println(dictionary.translate("monkey"));
-        //System.out.println(dictionary.translate("chien"));
-        //System.out.println(dictionary.translate("beer"));
-        //System.out.println(dictionary.translate("below"));
+        System.out.println(dictionary.translate("monkey"));
+        System.out.println(dictionary.translate("chien"));
+        System.out.println(dictionary.translate("beer"));
+        System.out.println(dictionary.translate("below"));
         
         dictionary.delete("mariposa");
         
         
-        //System.out.println(dictionary.translate("fleur"));
-        //System.out.println(dictionary.translate("chien"));
-        //System.out.println(dictionary.translate("bateau"));
+        System.out.println(dictionary.translate("fleur"));
+        System.out.println(dictionary.translate("chien"));
+        System.out.println(dictionary.translate("bateau"));
        
         
         dictionary.save();        
