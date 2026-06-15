@@ -44,18 +44,20 @@ public class MagicSquare {
     }
 
     public ArrayList<Integer> sumsOfDiagonals() {
-        ArrayList<Integer> sum = new ArrayList();
-        
+        ArrayList<Integer> sum = new ArrayList();        
         int[] resultSum = new int[2];
+        
         for (int i = 0; i < this.square.length; i++){
             resultSum[0] += this.square[i][i];
-        }      
+        }
+        
         sum.add(resultSum[0]);
         
         for(int j = 0; j < this.square.length; j++){
             int ind = this.square.length -1;
             resultSum[1] += this.square[j][ind - j];
         }
+        
         sum.add(resultSum[1]);
         
         return sum;
@@ -68,7 +70,8 @@ public class MagicSquare {
             value = upperLimit;
         } else if (value > upperLimit){
             value = 0;
-        }       
+        }
+        
         return value;
     }
 
@@ -79,6 +82,7 @@ public class MagicSquare {
 
     public ArrayList<Integer> giveAllNumbers() {
         ArrayList<Integer> numbers = new ArrayList<>();
+        
         for (int row = 0; row < square.length; row++) {
             for (int col = 0; col < square[row].length; col++) {
                 numbers.add(square[row][col]);
