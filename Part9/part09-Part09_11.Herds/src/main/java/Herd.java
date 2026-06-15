@@ -31,10 +31,13 @@ public class Herd implements Movable{
         if(this.herd.isEmpty()){
             return "X: 0; Y: 0";
         }
+        
         String herd = "";
+        
         for (Movable being : this.herd){
             herd += being.toString() + "\n";
         }
+        
         return herd;
     }
 }
