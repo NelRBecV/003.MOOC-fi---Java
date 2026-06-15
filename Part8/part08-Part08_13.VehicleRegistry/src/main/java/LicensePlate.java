@@ -27,7 +27,9 @@ public class LicensePlate {
         if (!(plate instanceof LicensePlate)){
             return false;
         }
+        
         LicensePlate license = (LicensePlate) plate;
+        
         if (this.country.equals(license.country) && this.liNumber.equals(license.liNumber)){
             return true;
         }
@@ -38,9 +40,7 @@ public class LicensePlate {
     public int hashCode(){
         int hash = 13;                
         int number = liNumber.hashCode() + country.hashCode();        
-        return 19 * hash * number;
-        //Objects.hashCode() works better with null values than bellow
-        //Objects.hash() gets a hasn number from mulptiple objects
+        return 19 * hash * number;        
     }
 
 }
