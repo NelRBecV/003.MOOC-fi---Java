@@ -23,8 +23,7 @@ public class InputView {
     }
     
     public Parent getView(){
-        GridPane inputWords = new GridPane();
-        
+        GridPane inputWords = new GridPane();        
         Label labelWord = new Label("Word");
         TextField fieldWord = new TextField();        
         Label labelTranslation = new Label("Translation");
