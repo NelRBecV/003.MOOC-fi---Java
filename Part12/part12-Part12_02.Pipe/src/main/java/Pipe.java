@@ -21,13 +21,16 @@ public class Pipe<T> {
     
     public T takeFromPipe(){
         if(!this.isInPipe()) return null;
+        
         T removed = this.value.get(0);
         this.value.remove(0);
+        
         return removed;
     }
     
     public boolean isInPipe(){
         if(this.value.isEmpty()) return false;
+        
         return true;
     }
 }
