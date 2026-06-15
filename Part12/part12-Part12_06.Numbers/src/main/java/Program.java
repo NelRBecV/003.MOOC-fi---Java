@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Program {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
+        Scanner scanner = new Scanner(System.in);        
         Random zeroToTen = new Random();
         
         System.out.println("How namy random numbers should be printed?");
