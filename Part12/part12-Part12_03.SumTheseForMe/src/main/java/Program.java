@@ -6,6 +6,7 @@ public class Program {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         // test your method here
+        
         System.out.println("How many numbers: ");
         int spaces = scan.nextInt();
         int[] numbers = new int[spaces];
@@ -25,6 +26,7 @@ public class Program {
         if(toWhere > array.length) toWhere = array.length;
              
         int sum = 0;
+        
         for (int i = fromWhere; i< toWhere; i++){
             if(array[i]< largest && array[i] > smallest){
                 sum += array[i];
