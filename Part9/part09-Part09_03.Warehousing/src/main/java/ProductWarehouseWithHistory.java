@@ -15,7 +15,9 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
     public ProductWarehouseWithHistory(String productName, double capacity, double initialBalance){
         super(productName,capacity);
         super.addToWarehouse(initialBalance);
+        
         record = new ChangeHistory();
+        
         this.addHistory(initialBalance);
     }
     
@@ -36,6 +38,7 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
     public double takeFromWarehouse(double amount){        
         double result = super.takeFromWarehouse(amount);
         this.addHistory(super.getBalance());
+        
         return result;
     }
     
