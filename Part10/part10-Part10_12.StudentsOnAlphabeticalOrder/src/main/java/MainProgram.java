@@ -10,11 +10,14 @@ public class MainProgram {
         Student first = new Student("jamo3");
         Student second = new Student("Jamo2");
         Student third = new Student("hami");
-        List<Student> students = new ArrayList();        
+        List<Student> students = new ArrayList();
+        
         students.add(first);
         students.add(second);
         students.add(third);        
+        
         Collections.sort(students);
+        
         System.out.println(students);
     }
 }
