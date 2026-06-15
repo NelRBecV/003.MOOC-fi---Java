@@ -9,6 +9,7 @@ public class AverageOfSelectedNumbers {
         // toteuta ohjelmasi tänne
         ArrayList<String> numbers = new ArrayList<>();
         System.out.println("input numbers, type \"end\" to stop.");
+        
         while(true){
             String input = scanner.nextLine();
             if (input.equals("end")){
@@ -16,8 +17,10 @@ public class AverageOfSelectedNumbers {
             }
             numbers.add(input);
         }
+        
         System.out.println("Print th average of the negative or the positive numbers? (n/p)");
         String option = scanner.nextLine();
+        
         if (option.equals("p")){
             System.out.println(numbers.stream()
                                       .mapToInt(n -> Integer.valueOf(n))
