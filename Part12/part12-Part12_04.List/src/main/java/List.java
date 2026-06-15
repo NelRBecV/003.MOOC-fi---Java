@@ -21,6 +21,7 @@ public class List<T> {
         if(this.values.length == this.nextFreeIndex){
             this.grow();
         }
+        
         this.values[this.nextFreeIndex] = value;
         this.nextFreeIndex++;
     }
@@ -28,6 +29,7 @@ public class List<T> {
     private void grow(){
         int newArrayLength = this.values.length + this.values.length / 2;
         T[] expandedList = (T[]) new Object[newArrayLength];
+        
         for (int i = 0; i < this.nextFreeIndex; i++){
             expandedList[i] = this.values[i];
         }
@@ -49,6 +51,7 @@ public class List<T> {
     
     public int indexOfValue(T value){
         for (int j = 0; j < this.nextFreeIndex; j++){
+            
             if(this.values[j].equals(value)){
                 return j;
             }
@@ -68,9 +71,11 @@ public class List<T> {
     
     public void remove(T value){
         int searchIndex = indexOfValue(value);
+        
         if (searchIndex < 0){
             return;
         }        
+        
         this.values[searchIndex] = null;
         this.sortValues(searchIndex);
         this.nextFreeIndex--;      
