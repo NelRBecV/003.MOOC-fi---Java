@@ -24,15 +24,18 @@ public class Box implements Packable{
         if(this.weight() + item.weight()> this.maximumCapacity){
             return;
         }
+        
         this.box.add(item);
     }
     
     @Override
     public double weight(){
         double sum = 0;
+        
         for (Packable item : box){
             sum +=item.weight();
         }
+        
         return sum;
     }
     
