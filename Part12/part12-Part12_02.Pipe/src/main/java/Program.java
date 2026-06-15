@@ -11,6 +11,7 @@ public class Program {
         pipe.putIntoPipe("dab");
         pipe.putIntoPipe("dab");
         pipe.putIntoPipe("daa");
+        
         while(pipe.isInPipe()) {
             System.out.println(pipe.takeFromPipe());
         }
@@ -24,6 +25,7 @@ public class Program {
         while(numberPipe.isInPipe()) {
             sum = sum + numberPipe.takeFromPipe();
         }
+        
         System.out.println(sum);
         System.out.println(numberPipe.takeFromPipe());
 
