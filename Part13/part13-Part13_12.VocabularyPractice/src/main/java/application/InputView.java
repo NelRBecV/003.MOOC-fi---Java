@@ -46,8 +46,7 @@ public class InputView {
             fieldWord.setText("");
             fieldTranslation.setText("");
             fieldWord.requestFocus();
-        });
-        
+        });        
         
         return inputWords;
     }
