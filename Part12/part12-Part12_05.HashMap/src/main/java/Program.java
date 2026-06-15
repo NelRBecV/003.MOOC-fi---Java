@@ -18,30 +18,6 @@ public class Program {
             dictionary.add(words[i], trans[i]);
         }
         
-        /*System.out.println(numbers.get(5));
-        System.out.println(numbers.get(4));
-        System.out.println(numbers.get(8));
-        System.out.println(numbers.get(2));
-        System.out.println("");
-        
-        numbers.add(8,19);
-        numbers.add(2,16);
-        
-        System.out.println(numbers.get(5));
-        System.out.println(numbers.get(4));
-        System.out.println(numbers.get(8));
-        System.out.println(numbers.get(2));
-        System.out.println("");
-        
-        numbers.remove(3);
-        numbers.remove(5);
-        numbers.remove(7);
-        numbers.remove(9);
-        
-        for (int i = 0; i < numbers.size(); i++){
-            System.out.println(numbers.get(i));
-        }*/
-        
         System.out.println(dictionary.get("wood"));
         System.out.println(dictionary.get("wolf"));
         System.out.println(dictionary.get("seed"));
