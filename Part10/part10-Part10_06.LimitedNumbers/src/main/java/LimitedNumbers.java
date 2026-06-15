@@ -7,6 +7,7 @@ public class LimitedNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> inputs = new ArrayList();
+        
         while (true){
             int input = Integer.valueOf(scanner.nextLine());
             if (input < 0){
@@ -14,6 +15,7 @@ public class LimitedNumbers {
             }
             inputs.add(input);
         }
+        
         inputs.stream()            
             .filter(n -> n > 0 && n < 6)
             .forEach(n -> System.out.println(n));
