@@ -18,11 +18,14 @@ public class Container {
     public int contains(){
         return this.quantity;
     }
+    
     public void add(int amount){
         if(amount < 0){
             return;
         }
+        
         this.quantity += amount;
+        
         if (this.quantity > 100){
             this.quantity = 100;
         }
@@ -32,7 +35,9 @@ public class Container {
         if(amount < 0){
             return;
         }
+        
         this.quantity -= amount;
+        
         if(this.quantity < 0){
             this.quantity = 0;
         }
