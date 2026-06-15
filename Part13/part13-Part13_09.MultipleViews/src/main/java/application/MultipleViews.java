@@ -17,17 +17,14 @@ public class MultipleViews extends Application{
     }
     
     @Override
-    public void start(Stage win){
-        
-        
+    public void start(Stage win){                
         BorderPane first = new BorderPane();
         VBox second = new VBox();
-        GridPane third = new GridPane();
-        
+        GridPane third = new GridPane();        
         Label firstViewLabel = new Label("First View!");
         Button toSecond = new Button("To the second view!");
-        Scene firstView = new Scene(first);        
         
+        Scene firstView = new Scene(first);                
         first.setCenter(toSecond);
         first.setTop(firstViewLabel);
         
@@ -51,8 +48,6 @@ public class MultipleViews extends Application{
         toFirst.setOnAction((eent) -> {win.setScene(firstView);});        
         
         win.setScene(firstView);
-        win.show();        
-        
+        win.show();                
     }
-
 }
