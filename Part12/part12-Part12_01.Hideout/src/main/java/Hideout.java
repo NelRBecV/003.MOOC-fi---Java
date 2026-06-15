@@ -24,8 +24,10 @@ public class Hideout<T> {
         if(!this.isInHideout()){
             return null;
         }
+        
         T deleted = this.value;
         this.value = null;
+        
         return deleted;
     }
     
