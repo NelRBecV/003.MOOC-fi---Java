@@ -24,21 +24,16 @@ public class VocabularyPracticeApplication extends Application{
     @Override
     public void start(Stage window){
         BorderPane winWordTranslation = new BorderPane();
-        HBox menu = new HBox();
-        
+        HBox menu = new HBox();        
         InputView addWords = new InputView(dictionary);
-        PracticeView practiceWords = new PracticeView(dictionary);
-        
+        PracticeView practiceWords = new PracticeView(dictionary);        
         Button vocabularyInput = new Button("Enter new words");
         Button practiceInput = new Button("Practice");
-        
-        
+                
         menu.setPadding(new Insets(10,10,10,10));        
         menu.setSpacing(10);
         menu.getChildren().addAll(vocabularyInput,practiceInput);
         
-        
-        //winWordTranslation.setPrefSize(400, 300);
         winWordTranslation.setTop(menu);
         
         vocabularyInput.setOnAction((event) -> winWordTranslation.setCenter(addWords.getView()));
