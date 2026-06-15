@@ -20,7 +20,7 @@ public class ApplicationLogic {
     }
     
     public void execute(int times){
-        for(int lap = 0;lap < times;lap++){
+        for(int lap = 0; lap < times; lap++){
             System.out.println("Application logic is working");
             this.ui.update();
         }
