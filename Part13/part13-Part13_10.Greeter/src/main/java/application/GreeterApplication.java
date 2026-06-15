@@ -15,8 +15,7 @@ public class GreeterApplication extends Application{
 
     @Override
     public void start(Stage win){
-        GridPane greetWindow = new GridPane();
-        
+        GridPane greetWindow = new GridPane();        
         TextField nameInput = new TextField();
         Button nameSending = new Button("Start");
         
@@ -30,17 +29,16 @@ public class GreeterApplication extends Application{
         greetWindow.setVgap(10);
         
         
-        Scene nameWindow = new Scene(greetWindow);
-        
+        Scene nameWindow = new Scene(greetWindow);        
         BorderPane personGreeting = new BorderPane();
         
         personGreeting.setPrefSize(300, 180);        
-        
              
         Scene greetMessage = new Scene(personGreeting);
         
         nameSending.setOnAction((event) -> {
             String name = nameInput.getText();              
+            
             if (name.isBlank()){
                 return;
             }
