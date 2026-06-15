@@ -45,7 +45,8 @@ public class AssetControl {
         
         while (true){                       
             this.printCommands();
-            String input = scan.nextLine();            
+            String input = scan.nextLine();
+            
             if(input.equals("x")){                
                 break;
             }
@@ -53,6 +54,7 @@ public class AssetControl {
             if (input.equals("1")){
                 System.out.println("Give the airplane id:");
                 String code = scan.nextLine();
+                
                 System.out.println("Give the airplane capacity:");
                 int capacity = Integer.parseInt(scan.nextLine());                    
 
@@ -62,8 +64,10 @@ public class AssetControl {
             if(input.equals("2")){                
                 System.out.println("Give the airplane id:");
                 Airplane code = this.getPlane(scan.nextLine());
+                
                 System.out.println("Give the departure airport id:");
                 String depart = scan.nextLine();
+                
                 System.out.println("Give the target airport id: ");
                 String dest = scan.nextLine();
                 
