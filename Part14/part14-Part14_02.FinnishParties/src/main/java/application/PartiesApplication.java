@@ -17,10 +17,8 @@ public class PartiesApplication extends Application{
     @Override
     public void start(Stage win ){        
         NumberAxis yAxis = new NumberAxis(0.0,30.0,3);
-        NumberAxis xAxis = new NumberAxis(1964,2012,4);
-        
+        NumberAxis xAxis = new NumberAxis(1964,2012,4);        
         HashMap<String,HashMap<Integer,Double>>chartData = getDatabase("partiesdata.tsv");
-
         LineChart<Number,Number>finnishParties = new LineChart(xAxis,yAxis);
         
         xAxis.setLabel("Year");
@@ -44,24 +42,17 @@ public class PartiesApplication extends Application{
         
         win.setScene(scene);
         win.setTitle("Finnish Parties Support");
-        win.show();
-        
+        win.show();        
     }
     
     public static void main(String[] args) {
         launch(PartiesApplication.class);
         System.out.println("Hello world!");
-        
-        
-        
-        
     }
-    
     
     public static HashMap<String,HashMap<Integer,Double>> getDatabase(String filename){
         HashMap<String, HashMap<Integer,Double>> data = new HashMap();
-        ArrayList<String[]> inputs = new ArrayList();
-        
+        ArrayList<String[]> inputs = new ArrayList();        
         File filedata = new File(filename);
         
         try(Scanner scan = new Scanner(filedata)){
@@ -74,7 +65,8 @@ public class PartiesApplication extends Application{
             System.out.println("There was a problem openning the file.");
         }
         String[] years = inputs.get(0);
-        inputs.remove(0);
+        
+        inputs.remove(0);        
         
         inputs.forEach((value)-> {            
             data.put(value[0].trim(), new HashMap());
