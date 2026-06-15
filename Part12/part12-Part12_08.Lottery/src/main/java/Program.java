@@ -10,9 +10,11 @@ public class Program {
         for(int j = 0; j < 200; j++){
             row.randomizeNumbers();
             ArrayList<Integer> lotteryNumbers = row.numbers();
+            
             for (Integer number : lotteryNumbers) {
                 System.out.print(number + " ");
             }
+            
             System.out.println("");
         }
     }   
