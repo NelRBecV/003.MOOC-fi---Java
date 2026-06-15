@@ -14,8 +14,6 @@ public class Program {
         System.out.println("");
         System.out.println(mySquare.sumsOfRows());
         System.out.println(mySquare.sumsOfColumns());
-        System.out.println(mySquare.sumsOfDiagonals());
-        
-        
+        System.out.println(mySquare.sumsOfDiagonals());               
     }
 }
