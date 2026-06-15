@@ -15,8 +15,7 @@ public class TicTacToeApplication extends Application{
     
     @Override
     public void start(Stage window){ 
-        this.gameboard = new TicTacToeGameLogic();
-        
+        this.gameboard = new TicTacToeGameLogic();        
         BorderPane tableboard = new BorderPane();        
         MainSection table = new MainSection(gameboard);
         
@@ -26,8 +25,7 @@ public class TicTacToeApplication extends Application{
         
         Scene scene = new Scene(tableboard);                       
                 
-        window.setScene(scene);
-               
+        window.setScene(scene);               
         window.show();
     }
 
