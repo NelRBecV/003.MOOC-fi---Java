@@ -6,15 +6,7 @@ public class Program {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         // test your class here
-        /*List<String> myList = new List();
-        myList.add("Hello");
-        myList.add("World");
-        
-        for (int w = 0; w < myList.size(); w++){
-            System.out.println(myList.value(w));
-        }
-        System.out.println(myList.value(3));*/
-        
+                
         List<Integer> myList = new List<>();
         
         myList.add(5);
@@ -26,17 +18,21 @@ public class Program {
         }
         System.out.println("");   
         
-        myList.remove(2);
+        myList.remove(2);        
         System.out.println("");
+        
         for(int item = 0; item <  myList.size(); item++){
             System.out.println(myList.value(item));
         }
+        
         System.out.println("");   
         
         System.out.println(myList.contains(5));
         int index = myList.indexOfValue(15);
+        
         System.out.println(index);
         System.out.println(myList.value(index));
+        
         myList.remove(15);
         System.out.println(myList.contains(15));
         
