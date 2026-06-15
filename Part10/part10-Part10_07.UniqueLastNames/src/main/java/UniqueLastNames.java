@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class UniqueLastNames {
 
     public static void main(String[] args) {
+        //code provided by excercise template. I've done in a different way but I could touch it at all
         ArrayList<Person> persons = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
@@ -22,9 +23,12 @@ public class UniqueLastNames {
             System.out.println("Input first name: ");
             String firstName = "NaN";
             if(scanner.hasNextLine()){firstName = scanner.nextLine();}
+            
             System.out.println("Input last name: ");
             String lastName = "NaN";
             if(scanner.hasNextLine()){lastName = scanner.nextLine();}
+
+            //valueOf will raise a exception if you input a non-numerical string
             System.out.println("Input the year of birth: ");
             int birthYear = 0;
             if(scanner.hasNextLine()){birthYear = Integer.valueOf(scanner.nextLine());}
