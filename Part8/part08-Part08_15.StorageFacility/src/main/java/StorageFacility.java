@@ -38,11 +38,13 @@ public class StorageFacility {
     
     public ArrayList<String> storageUnits(){
         ArrayList<String>units = new ArrayList<>();
+        
         for (String unit: this.warehouse.keySet()){
             if(!(this.warehouse.get(unit).isEmpty())){
                 units.add(unit);
             }
         }
+        
         return units;
     }
     
