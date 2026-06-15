@@ -14,6 +14,7 @@ public class HashMap<K,V> {
     
     public HashMap(){
         this.value = new ArrayList();
+        
         for(int i = 0; i<32;i++){
             this.value.add(new ArrayList());
         }
@@ -27,6 +28,7 @@ public class HashMap<K,V> {
     
     private int getIndex(int index,K key){
         ArrayList<Pair<K,V>> indexContent = this.value.get(index);
+        
         for (int i = 0; i < indexContent.size(); i++){
             if(indexContent.get(i).getKey().equals(key)){
                 return i;
@@ -36,8 +38,7 @@ public class HashMap<K,V> {
     }
     
     public void add(K key, V value){
-        int inputHash = returnHash(key);
-       
+        int inputHash = returnHash(key);       
         int inputIndex = getIndex(inputHash,key);
        
         if(inputIndex < 0){
@@ -49,13 +50,13 @@ public class HashMap<K,V> {
      }
     
     public V get(K key){
-       int inputHash = returnHash(key);
-       
+       int inputHash = returnHash(key);       
        int inputIndex = getIndex(inputHash,key);
        
        if (inputIndex < 0){
            return null;
        } 
+        
        return this.value.get(inputHash).get(inputIndex).getValue();
     }
     
@@ -70,6 +71,7 @@ public class HashMap<K,V> {
         Pair<K,V> removed = this.value.get(inputHash).get(inputIndex);
         this.value.get(inputHash).remove(removed);
         this.currentIndex--;
+        
         return removed.getValue();
     }
     
