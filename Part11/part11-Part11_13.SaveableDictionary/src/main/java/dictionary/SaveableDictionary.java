@@ -30,6 +30,7 @@ public class SaveableDictionary {
     
     public boolean load(){
         File dictFile = new File(this.fileName);
+        
         try(Scanner scan = new Scanner(dictFile)){
             while(scan.hasNext()){
                 String[] word = scan.nextLine().split(":");                
@@ -44,9 +45,11 @@ public class SaveableDictionary {
     
     public boolean save(){        
         try (PrintWriter file = new PrintWriter(this.fileName)){
+            
             for(String wordKey: this.dictionary.keySet()){
                 file.println(wordKey + ":"+this.dictionary.get(wordKey));                
             }
+            
             file.close();
             
         } catch (Exception e){
@@ -61,6 +64,7 @@ public class SaveableDictionary {
     
     public String translate(String word){
         for(String dictKey: this.dictionary.keySet()){
+            
             if (this.dictionary.get(dictKey).equals(word)){
                 return dictKey;
             }
@@ -70,6 +74,7 @@ public class SaveableDictionary {
     
     public void delete(String word){
         if (this.dictionary.containsValue(word)){
+            
             for(String keyWord: this.dictionary.keySet())
                 if(this.dictionary.get(keyWord).equals(word)){
                     this.dictionary.remove(keyWord);
