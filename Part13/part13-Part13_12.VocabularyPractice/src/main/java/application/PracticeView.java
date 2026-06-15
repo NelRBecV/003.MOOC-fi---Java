@@ -25,8 +25,7 @@ public class PracticeView {
     
     public Parent getView(){
         this.word = dictionary.getRandomWord();       
-        GridPane inputView = new GridPane();
-        
+        GridPane inputView = new GridPane();        
         Label labelInstructions = new Label("Translate the word '" + this.word +"'");
         TextField fieldAnswer = new TextField();
         Button checkAnswer = new Button("Check");
@@ -58,8 +57,7 @@ public class PracticeView {
         });
         
         fieldAnswer.setOnKeyTyped((event) -> showCorrectAnswer.setText(""));
-        
-        
+                
         return inputView;
     }
     
