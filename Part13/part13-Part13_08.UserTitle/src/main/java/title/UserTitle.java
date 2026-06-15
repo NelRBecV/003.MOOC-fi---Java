@@ -9,8 +9,7 @@ public class UserTitle extends Application{
     
     @Override
     public void start(Stage window){
-        Parameters paramList = getParameters();
-        
+        Parameters paramList = getParameters();        
         String programName = paramList.getNamed().get("name");
         
         window.setTitle(programName);
