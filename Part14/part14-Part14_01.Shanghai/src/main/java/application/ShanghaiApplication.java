@@ -17,12 +17,10 @@ public class ShanghaiApplication extends Application{
         xAxis.setLabel("Year");
         yAxis.setLabel("Ranking");
         
-        LineChart<Number, Number> universitiesRank = new LineChart(xAxis, yAxis);
-        
+        LineChart<Number, Number> universitiesRank = new LineChart(xAxis, yAxis);        
         XYChart.Series helsinkiRanking = new XYChart.Series();
         
-        helsinkiRanking.setName("University of Helsinki");
-        
+        helsinkiRanking.setName("University of Helsinki");        
         helsinkiRanking.getData().add(new XYChart.Data<>(2007,73));
         helsinkiRanking.getData().add(new XYChart.Data<>(2008,68));
         helsinkiRanking.getData().add(new XYChart.Data<>(2009,72));
