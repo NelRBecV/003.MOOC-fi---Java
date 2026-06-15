@@ -15,8 +15,7 @@ public class LiteracyComparison {
             Files.lines(Paths.get(file))
                     .map(data1 -> data1.split(","))
                     .map(m -> new String[] {m[2],m[3],m[4],m[5]})                    
-                    .sorted((p,q) -> p[3].compareTo(q[3]))
-                    //.sorted((p,q) -> Double.parseDouble(p[3]) - Double.parseDouble(q[3]))
+                    .sorted((p,q) -> p[3].compareTo(q[3]))                    
                     .map(n -> n[1]+" ("+n[2]+"), "+n[0].replace("(%)", "").trim()+", "+n[3])
                     .forEach(record -> System.out.println(record));
                     
