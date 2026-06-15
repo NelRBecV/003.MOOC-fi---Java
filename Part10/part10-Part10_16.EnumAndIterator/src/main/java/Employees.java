@@ -52,9 +52,11 @@ public class Employees {
     }
     
     public void fire(Education education){
-        Iterator<Person> payroll = this.employees.iterator();        
+        Iterator<Person> payroll = this.employees.iterator();
+        
         while(payroll.hasNext()){
             Person employee = payroll.next();
+            
             if(employee.getEducation() == education){
                 payroll.remove();
             }
