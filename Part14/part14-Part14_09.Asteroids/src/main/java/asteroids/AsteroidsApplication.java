@@ -26,16 +26,20 @@ public class AsteroidsApplication extends Application {
     
     @Override
     public void start(Stage stage) throws Exception{
+        //Setting game space field
         Pane pane = new Pane();
         pane.setPrefSize(WIDTH, HEIGHT);
+        
         Text score = new Text(10,20,"Points: 0");
         score.setFont(Font.font("Arial",FontWeight.BOLD,20.0));
-       
-                      
+
+        //Creating player
         Ship ship = new Ship(WIDTH/2,HEIGHT/2);
         
-        AtomicInteger points = new AtomicInteger();        
+        //Setting game scoreboard counter
+        AtomicInteger points = new AtomicInteger();
         
+        //Creating enemies
         List<Asteroid> asteroids = new ArrayList();
         List<Projectile>projectiles = new ArrayList();
         
@@ -43,14 +47,17 @@ public class AsteroidsApplication extends Application {
             Random random = new Random();            
             asteroids.add(new Asteroid(random.nextInt(WIDTH/3), random.nextInt(HEIGHT)));
         }
-        
+
+        //Creating keys map
         Map<KeyCode,Boolean> pressedKeys = new HashMap<>();
-        
+
+        //Introducing enemies randomly into the window
         pane.getChildren().addAll(ship.getCharacter(),score);
         asteroids.forEach((asteroid) -> pane.getChildren().add(asteroid.getCharacter()));
         
         Scene scene = new Scene(pane);
-        
+
+        //Check which key was pessed
         scene.setOnKeyPressed(new EventHandler<KeyEvent>(){
             
             @Override
@@ -58,7 +65,8 @@ public class AsteroidsApplication extends Application {
                 pressedKeys.put(event.getCode(), true);
             }
         });
-        
+
+        //Check which key was released
         scene.setOnKeyReleased(new EventHandler<KeyEvent>(){
             
             @Override
@@ -86,8 +94,7 @@ public class AsteroidsApplication extends Application {
                 if(pressedKeys.getOrDefault(KeyCode.SPACE, false)){
                     Projectile projectile = new Projectile((int) ship.getCharacter().getTranslateX(),(int) ship.getCharacter().getTranslateY());
                     projectile.getCharacter().setRotate(ship.getCharacter().getRotate());
-                    projectiles.add(projectile);
-                    
+                    projectiles.add(projectile);                    
                     projectile.accelerate();
                     projectile.setMovement(projectile.getMoement().normalize().multiply(3));
                     
@@ -95,15 +102,18 @@ public class AsteroidsApplication extends Application {
                 }
                 
                 ship.move();                
-                
+
+                //moves all enemies alive in the game
                 asteroids.forEach((asteroid)-> {                    
                     asteroid.move();
-                    
+
+                    //stops the game if some asteroid crashes to the ship
                     if(ship.collide(asteroid)){
                         stop();
                     }                    
                 });
-                
+
+                //adds new asteroids to the game and checks if the new asteroid collide with the ship
                 if(Math.random() < 0.005){
                     Asteroid asteroid = new Asteroid(WIDTH,HEIGHT);
                     if(!asteroid.collide(ship)){
@@ -111,10 +121,12 @@ public class AsteroidsApplication extends Application {
                         pane.getChildren().add(asteroid.getCharacter());
                     }
                 }
-                                
+
+                //moves every projectile in game and checks if one of them impacts any asteroid
                 projectiles.forEach((projectile)-> {
                     projectile.move();
-                            
+
+                    //If an asteroid were impacted by a projectile, both are marked as "dead"
                     asteroids.forEach((asteroid)-> {
                         if(projectile.collide(asteroid)){
                             projectile.setAlive(false);
@@ -124,22 +136,21 @@ public class AsteroidsApplication extends Application {
                     });
                             
                 });
-                
-                
+                //remove the projectiles from the scene that impatcted to any asteroid                
                 projectiles.stream()
                         .filter((projectile)-> !projectile.isAlive())
                         .forEach(projectile -> pane.getChildren().remove(projectile.getCharacter()));
                 
+                //remove projectiles from arsenal list
                 projectiles.removeAll(projectiles.stream().filter(bullet -> !bullet.isAlive())
-                        .collect(Collectors.toList()));
-                
-                
+                        .collect(Collectors.toList()));                
+
+                //remove asteroids that were reached by a projectile
                 asteroids.stream()
                         .filter(asteroid -> !asteroid.isAlive())
                         .forEach(asteroid -> pane.getChildren().remove(asteroid.getCharacter()));
                 asteroids.removeAll(asteroids.stream().filter(asteroid-> !asteroid.isAlive())
-                                                      .collect(Collectors.toList()));
-                
+                                                      .collect(Collectors.toList()));                
             }
             
         }.start();
