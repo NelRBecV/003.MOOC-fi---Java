@@ -19,12 +19,7 @@ public class TextStatisticsApplication extends Application{
     public void start(Stage win){
         BorderPane elements = new BorderPane();
         HBox statusBar = new HBox();
-        
-        
-        
-        TextArea text = new TextArea();
-        
-        
+        TextArea text = new TextArea();                
         Label letterCounter = new Label("Letters: 0");
         Label wordCounter = new Label("Words: 0");
         Label longestWord = new Label("The longest word is: ");
@@ -34,10 +29,6 @@ public class TextStatisticsApplication extends Application{
         
         elements.setCenter(text);
         elements.setBottom(statusBar);
-        
-        
-        //elements.setCenter(text);
-        //elements.setBottom(statusBar);        
         
         Scene textProcessor = new Scene(elements);
         
