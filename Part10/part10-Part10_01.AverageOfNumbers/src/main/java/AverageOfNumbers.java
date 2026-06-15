@@ -10,13 +10,15 @@ public class AverageOfNumbers {
         // Write your program here
         ArrayList<String> numbers = new ArrayList<>();
         System.out.println("Input numbers, type \"end\" to stop.");
+        
         while(true){
-            String  input = scanner.nextLine();
+            String  input = scanner.nextLine();            
             if(input.equals("end")){
                 break;
-            }
+            }            
             numbers.add(input);
-        }                     
+        }
+        
         double average = numbers.stream()
                                 .mapToInt(n -> Integer.valueOf(n))                                
                                 .average()
