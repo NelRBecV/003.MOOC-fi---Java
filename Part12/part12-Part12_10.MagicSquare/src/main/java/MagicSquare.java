@@ -151,6 +151,7 @@ public class MagicSquare {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
+        
         for (int row = 0; row < square.length; row++) {
             for (int col = 0; col < square[row].length; col++) {
                 result.append(square[row][col]).append("\t");
