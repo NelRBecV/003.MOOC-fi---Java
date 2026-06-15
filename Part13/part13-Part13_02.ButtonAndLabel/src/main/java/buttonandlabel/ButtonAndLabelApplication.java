@@ -19,13 +19,10 @@ public class ButtonAndLabelApplication extends Application{
     public void start(Stage win){
     
         Label myButtonLabel = new Label("Click this button: ");
-        
-        
         Button myClickButton = new Button("Click Me");
         
         FlowPane windowComponents = new FlowPane();
-        windowComponents.getChildren().add(myButtonLabel);
-        
+        windowComponents.getChildren().add(myButtonLabel);        
         windowComponents.getChildren().add(myClickButton);
                  
         Scene myWin = new Scene(windowComponents);
