@@ -18,7 +18,6 @@ public class UnfairAdvertisementApplication extends Application {
         yAxis.setLabel("Faster and Better!");
 
         BarChart<String, Number> barChart = new BarChart<>(xAxis, yAxis);
-
         barChart.setTitle("Internet speed");
         barChart.setLegendVisible(false);
 
