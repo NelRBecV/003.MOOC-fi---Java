@@ -21,7 +21,9 @@ public class VehicleRegistry {
         if (this.registry.containsKey(licensePlate)){
             return false;
         }
+        
         this.registry.put(licensePlate, owner);
+        
         return true;
     }
     
@@ -29,6 +31,7 @@ public class VehicleRegistry {
         if (!(this.registry.containsKey(licensePlate))){
             return null;
         }
+        
         return this.registry.get(licensePlate);
     }
     
@@ -36,7 +39,9 @@ public class VehicleRegistry {
         if(!(this.registry.containsKey(licensePlate))){
             return false;
         }
+        
         this.registry.remove(licensePlate);
+        
         return true;
     }
     
@@ -48,10 +53,12 @@ public class VehicleRegistry {
     
     public void printOwners(){
         ArrayList<String> owners = new ArrayList<>();
+        
         for(String owner : registry.values()){
             if(owners.contains(owner)){
                 continue;
             }
+            
             owners.add(owner);
             System.out.println(owner);
         }
