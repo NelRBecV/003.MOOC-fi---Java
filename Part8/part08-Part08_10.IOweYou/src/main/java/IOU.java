@@ -18,11 +18,11 @@ public class IOU {
     
     public void setSum(String toWhom, double amount){
         double debt = 0.0;
+        
         if(!this.debt.containsKey(toWhom)){
             debt = this.debt.getOrDefault(toWhom, 0.0);
-        } /*else {
-            debt = this.debt.get(toWhom);
-        }*/
+        } 
+        
         debt += amount;
         
         this.debt.put(toWhom, debt);
@@ -32,6 +32,7 @@ public class IOU {
         if(!this.debt.containsKey(toWhom)){
             return 0;
         }
+        
         return this.debt.get(toWhom);
     }
 }
