@@ -29,6 +29,7 @@ public class UserInterface {
     
     public void start(){
         this.menu();
+        
         while (true){
             System.out.println("Command: ");
             String command = input.nextLine();
@@ -36,13 +37,13 @@ public class UserInterface {
             if (command.equals("add")){
                 System.out.println("Task: ");
                 String task = input.nextLine();
+        
                 if (!task.isBlank()){
                     pendings.add(task);
                 }
             }
             
-            if (command.equals("remove")){
-                
+            if (command.equals("remove")){                
                 System.out.println("Which one is removed? ");
                 int taskNumber = Integer.valueOf(input.nextLine());
                               
