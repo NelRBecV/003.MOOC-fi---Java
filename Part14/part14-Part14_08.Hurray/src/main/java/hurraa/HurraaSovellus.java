@@ -12,13 +12,13 @@ public class HurraaSovellus extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         BorderPane pane = new BorderPane();
-        AudioClip hurra = new AudioClip("file:bell.wav");
-        
+        //I used 'bell.wav' because the original clip is damaged
+        AudioClip hurra = new AudioClip("file:bell.wav");        
         Button nappi = new Button("Hurraa!");
+        
         pane.setCenter(nappi);
         
-        nappi.setOnAction((event) -> hurra.play());
-        
+        nappi.setOnAction((event) -> hurra.play());        
         
         Scene scene = new Scene(pane, 600, 400);
 
