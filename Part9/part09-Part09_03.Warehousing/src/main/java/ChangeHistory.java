@@ -28,7 +28,9 @@ public class ChangeHistory {
         if(this.history.isEmpty()){
             return 0.0;
         }
+        
         double max = 0.0;
+        
         for(double value : this.history){
             if(value > max){
                 max = value;
@@ -41,12 +43,15 @@ public class ChangeHistory {
         if(this.history.isEmpty()){
             return 0.0;
         }
+        
         double min = this.history.get(0);
+        
         for (double value : this.history){
             if (value < min){
                 min = value;
             }
         }
+        
         return min;
     }
     
@@ -54,7 +59,9 @@ public class ChangeHistory {
         if(this.history.isEmpty()){
             return 0.0;
         }        
+        
         double sum = 0.0;
+        
         for(double value : this.history){
             sum += value;
         }
