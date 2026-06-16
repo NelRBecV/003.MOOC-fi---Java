@@ -18,6 +18,7 @@ public class UserInterface {
 
     public void start() throws SQLException {
         while (true) {
+            //Displays User Interface menu
             System.out.println("");
             System.out.println("Enter command:");
             System.out.println("1) list");
@@ -33,11 +34,13 @@ public class UserInterface {
             }
 
             // implement the functionality here
+            //if the user inputs 1, the program displays all data storaged in database
             if (command.equals("1")){
                 System.out.println("Listing the database contents");
                 database.list().forEach((todo)-> System.out.println(todo));
             }
-            
+
+            //If the user inputs 2, the program adds a new record to the database
             if (command.equals("2")){
                 System.out.println("Adding a new todo");                
                 int id = database.list().size() + 1;
@@ -48,7 +51,8 @@ public class UserInterface {
                 
                 database.add(new Todo(id,name,desc,false));
             }
-            
+
+            //If the user inputs 3, the program marks the task as completed 
             if (command.equals("3")){
                 System.out.println("Which todo should be marked as done (give the id)?");
                 int indexId = scanner.nextInt();
@@ -58,7 +62,8 @@ public class UserInterface {
                     }
                 }
             }
-            
+
+            //If the user inputs 4, the program deletes the task from database
             if (command.equals("4")){
                 System.out.println("Which todo shuld be remoed (give the id)?");
                 int targetId = scanner.nextInt();                
