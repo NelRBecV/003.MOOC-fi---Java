@@ -16,6 +16,7 @@ public class TodoDao {
         this.databasePath = databasePath;
     }
 
+    //Gets data from external database and put it into a list
     public List<Todo> list() throws SQLException {
         List<Todo> todos = new ArrayList<>();
         try (Connection connection = createConnectionAndEnsureDatabase();
@@ -27,6 +28,7 @@ public class TodoDao {
         return todos;
     }
 
+    //Insert new records into the database
     public void add(Todo todo) throws SQLException {
         try (Connection connection = createConnectionAndEnsureDatabase()) {
             PreparedStatement stmt = connection.prepareStatement("INSERT INTO Todo (name, description, done) VALUES (?, ?, ?)");
@@ -37,6 +39,7 @@ public class TodoDao {
         }
     }
 
+    //Change todo status in database
     public void markAsDone(int id) throws SQLException {
         try (Connection connection = createConnectionAndEnsureDatabase()) {
             PreparedStatement stmt = connection.prepareStatement("UPDATE Todo SET done = true WHERE id = ?");
@@ -45,6 +48,7 @@ public class TodoDao {
         }
     }
 
+    //Delete task from database
     public void remove(int id) throws SQLException {
         try (Connection connection = createConnectionAndEnsureDatabase()) {
             PreparedStatement stmt = connection.prepareStatement("DELETE FROM Todo WHERE id = ?");
@@ -53,6 +57,7 @@ public class TodoDao {
         }
     }
 
+    //Creates a new database in case there is no database into the project
     private Connection createConnectionAndEnsureDatabase() throws SQLException {
         Connection conn = DriverManager.getConnection(this.databasePath, "sa", "");
         try {
