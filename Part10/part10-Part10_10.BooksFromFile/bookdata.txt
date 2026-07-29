@@ -1,0 +1,10 @@
+Pride and Prejudice,1813,279,Jane Austen
+1984,2020,298,George Orwell
+Crime and Punishment,1866,671,Fyodor Dostoevsky
+Hamlet,1601,289,William Shakespeare
+One Hundred Years of Solitude,1967,417,Gabriel Garcia Marquez
+Anna Karenina,1878,960,Leo Tolstoy
+The Odyssey,801,541,Homer
+The Stranger,1942,123,Albert Camus
+The Brothers Karamazov,1880,796,Fyodor Dostoevsky
+Lolita,1955,368,Vladimir Nabokov
