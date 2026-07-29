@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class IndexWasNotFound {
+
+    public static void findValueIndex(int[] numbers,int value){
+        for (int ind = 0; ind < numbers.length; ind++){
+            if (numbers[ind] == value){
+                System.out.println(value + " is at index " + ind + ".");
+                return;
+            }                           
+        }
+        System.out.println(value + " was not found.");
+            
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+        array[0] = 6;
+        array[1] = 2;
+        array[2] = 8;
+        array[3] = 1;
+        array[4] = 3;
+        array[5] = 0;
+        array[6] = 9;
+        array[7] = 7;
+
+        System.out.println("Search for? ");
+        int searching = Integer.valueOf(scanner.nextLine());
+
+        // Implement the search functionality here
+        findValueIndex(array,searching);
+        
+        
+    }
+
+}
